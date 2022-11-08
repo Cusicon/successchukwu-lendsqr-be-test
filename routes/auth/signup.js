@@ -71,8 +71,7 @@ router.post(
 			let hashed_pin = await bcrypt.hash(pin, 10);
 			let avatar = `https://ui-avatars.com/api/?name=${fullname
 				.split(' ')
-				.join('%20')}
-				&background=f36629&color=fce999&size=128&bold=true`;
+				.join('%20')}&background=f36629&color=fce999&size=128&bold=true`;
 			req.body = {
 				...req.body,
 				avatar,
