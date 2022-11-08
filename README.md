@@ -1,6 +1,6 @@
 # Lendsqr Backend Assessment
 
-Demo Credit a wallet service API for Lendsqr backend interview test
+Demo Credit is a wallet service API for Lendsqr backend interview test
 
 <br>
 
