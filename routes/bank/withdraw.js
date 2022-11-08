@@ -19,7 +19,7 @@ router.get(
 		const { account_no } = req.params;
 
 		try {
-			await mustBeValidAccountNo(knexUser, account_no);
+			const found_user = await mustBeValidAccountNo(knexUser, account_no);
 
 			return res.json({
 				...global.jsonBag,
@@ -126,4 +126,6 @@ async function mustBeValidAccountNo(knexUser, account_no) {
 	const found_user = found_user_data[0];
 
 	if (!found_user) throw Error('No Account found!');
+
+	return found_user;
 }
