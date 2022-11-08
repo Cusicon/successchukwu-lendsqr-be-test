@@ -26,9 +26,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // --( CUSTOM MIDDLEWARES )--
 app.use(jsonBag, (req, res, next) => {
 	req.genID = (len) => genID(len);
-	req.cleanBody = (body) =>
-		Object.keys(req.body).forEach((rB) => {
-			if (!body.includes(rB)) delete req.body[rB];
+	req.cleanBody = (body, agent = req.body) =>
+		Object.keys(agent).forEach((rB) => {
+			if (!body.includes(rB)) delete agent[rB];
 		});
 
 	next();
