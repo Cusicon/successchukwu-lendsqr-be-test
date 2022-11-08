@@ -14,7 +14,7 @@ Visit the url and be pleased 💪🏾
 
 ## API Endpoints 🔗
 
-Here is a copy of the [postman collection](https://successchukwu.postman.co/workspace/Personal-Workspace-APIs~d5101cdd-522b-4cae-84e1-aff298415f1b/collection/18382461-0d735682-9fd2-490d-991a-d89c6f142e7a?action=share&creator=18382461), all endpoint calls and responses are there, please refer to that.
+Here is a copy of the [postman collection](https://successchukwu.postman.co/workspace/New-Team-Workspace~390aa048-424b-4138-8e4a-d81e6eafebbf/collection/18382461-0d735682-9fd2-490d-991a-d89c6f142e7a?action=share&creator=18382461), all endpoint calls and responses are there, please refer to that.
 
 Incase you're having issues opening the link to postman or you find it hard to understand, I've also kept this for reference purposes.
 <br>
