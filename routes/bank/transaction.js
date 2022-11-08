@@ -5,29 +5,19 @@ const router = Router();
 // --( DB )--
 const knex = require('../../db/dbconnect');
 
-// GET: deposit money
+// GET: view all user's transactions
 router.get('/', jwtVerify, async (req, res) => {
-	const knexUser = knex('users');
+	const knexTransaction = knex('transactions');
 
 	try {
-		const found_user_data = await knexUser.where('id', req.user.id);
-		let found_user = found_user_data[0];
+		const transactions = await knexTransaction.where('user_id', req.user.id);
 
-		req.cleanBody(['fullname', 'account_no'], found_user);
-
-		if (!found_user)
-			return res.json({
-				status: res.statusCode == 500,
-				error: {
-					message: 'No user found!',
-				},
-				data: null,
-			});
+		if (!transactions) throw Error('No transactions found!');
 
 		return res.json({
-			message: 'Deposit now!',
+			message: 'All your transactions!',
 			error: null,
-			data: { user: found_user },
+			data: { transactions },
 		});
 
 		return;
