@@ -66,7 +66,7 @@ Sign Up <br>
 	"email": "iamcusicon@gmail.com",
 	"phone": "2348118362567",
 	"password": "081456",
-	"secret_pin": "1234"
+	"pin": "1234"
 }
 ```
 
@@ -135,7 +135,8 @@ User withdrawing from their wallet (a.k.a sending money to another user)
 	"bank": "STERLING BANK",
 	"account_no": "0501044555",
 	"account_name": "SUCCESS CHUKWU",
-	"description": "Cashback"
+	"description": "Cashback",
+	"auth_pin": "1234"
 }
 ```
 
