@@ -15,7 +15,7 @@ router.get('/', jwtVerify, async (req, res) => {
 		if (!transactions) throw Error('No transactions found!');
 
 		return res.json({
-			message: 'All your transactions!',
+			message: `All your transactions! (${transactions.length})`,
 			error: null,
 			data: { transactions },
 		});
