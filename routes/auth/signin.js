@@ -15,7 +15,7 @@ router.post(
 	// account number must not be empty
 	body('account_no', 'Please, enter a valid account number!')
 		.notEmpty()
-		.isNumeric(),
+		.isString(),
 	// password must be at least 5 chars long
 	body('password', 'Please, enter a password!').notEmpty().isString(),
 	async (req, res) => {
