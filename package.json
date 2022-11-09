@@ -5,11 +5,11 @@
 	"scripts": {
 		"start": "node ./bin/www",
 		"start:dev": "nodemon ./bin/www",
-		"migrate": "DB_NAME=demo_credit_lendsqr DB_USER=root DB_PASS=password knex migrate:latest --knexfile ./db/knexfile.js --knexpath ./db/dbconnect.js",
-		"migrate-up": "DB_NAME=demo_credit_lendsqr DB_USER=root DB_PASS=password knex migrate:up --knexfile ./db/knexfile.js --knexpath ./db/dbconnect.js",
-		"migrate-down": "DB_NAME=demo_credit_lendsqr DB_USER=root DB_PASS=password knex migrate:down --knexfile ./db/knexfile.js --knexpath ./db/dbconnect.js",
-		"migrate-rollback": "DB_NAME=demo_credit_lendsqr DB_USER=root DB_PASS=password knex migrate:rollback --all --knexfile ./db/knexfile.js --knexpath ./db/dbconnect.js",
-		"deploy": "git checkout -b prod && git merge main && git push"
+		"migrate": "node -r dotenv/config ./node_modules/knex/bin/cli.js migrate:latest --knexfile ./db/knexfile.js --knexpath ./db/dbconnect.js",
+		"migrate:up": "node -r dotenv/config ./node_modules/knex/bin/cli.js migrate:up --knexfile ./db/knexfile.js --knexpath ./db/dbconnect.js",
+		"migrate:down": "node -r dotenv/config ./node_modules/knex/bin/cli.js migrate:down --knexfile ./db/knexfile.js --knexpath ./db/dbconnect.js",
+		"migrate:rollback": "node -r dotenv/config ./node_modules/knex/bin/cli.js migrate:rollback --all --knexfile ./db/knexfile.js --knexpath ./db/dbconnect.js",
+		"deploy": "git checkout prod && git merge main && git push"
 	},
 	"dependencies": {
 		"bcryptjs": "^2.4.3",
