@@ -31,7 +31,7 @@ A complete listing of endpoints, parameters and body for an easier consumption o
 Postman Environments
 
 ```
-baseURL = 'http://localhost:8500/api/v1'
+baseURL = 'https://successchukwu-lendsqr-be-test.herokuapp.com/api/v1'
 LGDIN_USRTKN = "user's signed in token"
 ```
 
