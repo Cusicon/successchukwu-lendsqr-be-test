@@ -86,7 +86,7 @@ router.post(
 			return res.json({
 				...global.jsonBag,
 				status: (res.statusCode = 201),
-				message: 'Congrats, account created!',
+				message: `Congrats, account created!\nYour account number is ${account_no}.`,
 				error: null,
 				data: null,
 			});
